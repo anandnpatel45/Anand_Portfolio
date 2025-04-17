@@ -7,7 +7,7 @@
     <title>Anandkumar_Patel_Portfolio</title>
     <script>
       document.addEventListener('DOMContentLoaded', () => {
-        const base = '/Anand_Portfolio/';
+        const base = '/';
         // 1. Fix <img> tags
         document
           .querySelectorAll('img[src^="/Media/"]')
@@ -27,7 +27,7 @@
     
       // 3. Monkey‑patch fetch()
       ;(() => {
-        const base = '/Anand_Portfolio/';
+        const base = '/';
         const originalFetch = window.fetch;
         window.fetch = (resource, init) => {
           if (typeof resource === 'string' && resource.startsWith('/Media/')) {
@@ -38,8 +38,8 @@
       })();
     </script>
     
-    <script type="module" crossorigin src="/Anand_Portfolio/assets/index-PioG-LwG.js"></script>
-    <link rel="stylesheet" crossorigin href="/Anand_Portfolio/assets/index-4wHq6XRr.css">
+    <script type="module" crossorigin src="/assets/index-DTgCLoYh.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-4wHq6XRr.css">
   </head>
   <body>
     <div id="root"></div>
