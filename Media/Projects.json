@@ -1,0 +1,95 @@
+[
+  {
+    "year": 2024,
+    "highlight": 1,
+    "title": "Continuing minimal-defect production under material integrity cyberattacks",
+    "image": "/Media/2024_Cyberattack.gif",
+    "description": "Contributed to an AI framework for real-time defect recovery in manufacturing processes",
+    "features": [
+      "Demonstrated real-time in-raster defect recovery",
+      "Contributed to writing, reviewing, and editing",
+      "Created visualizations for the results"
+    ],
+    "technologies": ["OriginPro"],
+    "paperUrl": "https://doi.org/10.1016/j.mfglet.2024.02.006",
+    "githubUrl": "#"
+  },
+  {
+    "year": 2024,
+    "highlight": 1,
+    "title": "Throughput scaling and thermomechanical behaviour in Multiplexed Fused Filament Fabrication (MF3)",
+    "image": "/Media/2024_MF3.png",
+    "description": "Contributed to the development of a novel thermal model and toolpath synthesis for MF3, improving throughput and mechanical properties",
+    "features": [
+      "Enhanced the understanding of throughput scaling in MF3",
+      "Simulated mechanical behavior using COMSOL",
+      "Created visualizations for the results"
+    ],
+    "technologies": ["COMSOL Multiphysics", "OriginPro"],
+    "paperUrl": "https://doi.org/10.1016/j.cirp.2024.04.024",
+    "githubUrl": "#"
+  },
+  {
+    "year": 2023,
+    "highlight": 1,
+    "title": "PSPOnto: An application ontology to aid in data-driven materials design",
+    "image": "/Media/2023_PSPOnto.png",
+    "description": "Proposed an ontology to standardize material informatics (MI) datasets.",
+    "features": [
+      "Developed PSPOnto, an ontology for Process-Structure-Property (PSP) relations",
+      "Created knowledge base for MI datasets",
+      "Assembled corpus on manufacturing process parameters",
+      "Enabled efficient data storage and retrieval for PSP datasets"
+    ],
+    "technologies": ["Protege", "SPARQL", "Mendeley"],
+    "paperUrl": "https://etd.iisc.ac.in/handle/2005/6237",
+    "githubUrl": "#"
+  },
+  {
+    "year": 2022,
+    "highlight": 1,
+    "title": "Case study of a connecting rod: evaluating different design approaches",
+    "image": "/Media/2022_Connecting_Rod.png",
+    "description": "Optimized the design of a connecting rod for stiffness and mass.",
+    "features": [
+      "Compared literature-based, TPMS-based, topologically optimal, and generative design",
+      "TPMS-based IWP hollow structure found optimal",
+      "Performed peoperty homogenization for TPMS structures",
+      "Performed Design for Additive Manufacturing for the proposed geometries"
+    ],
+    "technologies": ["COMSOL MultiPhysics", "Autodesk Fusion 360", "MATLAB", "Generative design", "Design for AM"],
+    "paperUrl": "#",
+    "githubUrl": "#"
+  },  
+  {
+    "year": 2022,
+    "highlight": 0,
+    "title": "Establishing inverse process-structure linkage using a deep convolutional neural networks (CNN) approach",
+    "image": "/Media/2022_PSP_CNN.png",
+    "description": "Focused on validating the importance of microstructre metadata and demonstrated multi-input multi-output CNNs to inculcate that information.",
+    "features": [
+      "Modeled process-structure relations for Ultrahigh carbon steel and Ni-Co alloy",
+      "Achieved best results using microstructure+metadata input",
+      "Identified and addressed challenges with process-structure-property relations dataset"
+    ],
+    "technologies": ["Keras", "Google Collab", "Jupyter Notebook"],
+    "paperUrl": "https://etd.iisc.ac.in/handle/2005/6237",
+    "githubUrl": "#"
+  },
+  {
+    "year": 2021,
+    "highlight": 0,
+    "title": "Experimental thermal analysis of phase change materials (PCM) in domestic refrigerators",
+    "image": "/Media/2021_PCM.png",
+    "description": "Investigated the application of PCM to improve the energy efficiency of domestic refrigerators by elongating its refrigeration cycles.",
+    "features": [
+      "Designed and built experimental setup",
+      "Improved power consumption by 36.28%",
+      "Extended refrigeration cycle time by 104.34%",
+      "1st rank in College Project Expo 2021"
+    ],
+    "technologies": ["Experimental design", "Thermal analysis"],
+    "paperUrl": "#",
+    "githubUrl": "#"
+  }
+]
