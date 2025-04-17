@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
+import { scrollWithOffset } from '../utils/scrollWithOffset'
 import { ArrowRight, FolderGit2 } from 'lucide-react';
 
 type Project = {
@@ -70,7 +71,7 @@ export default function ProjectsPreview() {
                 {projects.slice(0, 5).map((project) => {
                   const slug = slugify(project.title);
                   return (
-                    <Link
+                    <HashLink smooth scroll={scrollWithOffset}
                       key={slug}
                       to={`/projects#${slug}`}
                       className="bg-gray-50 dark:bg-gray-900 rounded-lg overflow-hidden group/card hover:shadow-lg transition-shadow duration-300"
@@ -91,20 +92,20 @@ export default function ProjectsPreview() {
                           ))}
                         </ul>
                       </div>
-                    </Link>
+                    </HashLink>
                   );
                 })}
               </div>
             </div>
           </div>
 
-          <Link
+          <HashLink smooth scroll={scrollWithOffset}
             to="/projects"
             className="mt-8 inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300"
           >
             Explore all projects
             <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-2 transition-transform duration-300" />
-          </Link>
+          </HashLink>
         </div>
       </div>
     </section>

@@ -1,8 +1,8 @@
 import { ArrowRight, User, GraduationCap, FolderGit2, BookText, Code, ArrowLeft, Clock } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import { useEffect, useState } from 'react';
-import ScrollToTop from '../components/ScrollToTop';
 import ProjectsPreview from '../components/ProjectsPreview'; // adjust path as needed
+import { scrollWithOffset } from '../utils/scrollWithOffset'
 
 type Skill = {
   name: string;
@@ -90,7 +90,7 @@ const [latestPublicationTitle, setLatestPublicationTitle] = useState<string>('')
   const { hourAngle, minuteAngle, secondAngle } = getClockHandsAngles();
 
   return (
-    <div className="min-h-screen dark:bg-dark-bg transition-colors duration-300">
+    <div id="top" className="min-h-screen dark:bg-dark-bg transition-colors duration-300">
       {/* Hero Section */}
       <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -149,19 +149,18 @@ const [latestPublicationTitle, setLatestPublicationTitle] = useState<string>('')
                   Researcher • Engineer • Lifelong Leaner
                 </p>
                 <div className="flex flex-wrap gap-4 justify-center lg:justify-start animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
-                  <Link
+                  <HashLink smooth scroll={scrollWithOffset}
                     to="/projects"
                     className="inline-flex items-center px-8 py-4 text-lg font-medium text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-full hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
                   >
                     View My Work
                     <ArrowRight className="ml-2 w-5 h-5" />
-                  </Link>
-                  <a
-                    href="#contact"
+                  </HashLink>
+                  <HashLink smooth scroll={scrollWithOffset} to="#contact"
                     className="inline-flex items-center px-8 py-4 text-lg font-medium text-gray-700 dark:text-white border-2 border-gray-700 dark:border-white rounded-full hover:bg-gray-700 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 transform hover:scale-105 transition-all duration-300"
                   >
                     Contact Me
-                  </a>
+                  </HashLink>
                 </div>
 
                 {/* Clock Component */}
@@ -236,13 +235,13 @@ const [latestPublicationTitle, setLatestPublicationTitle] = useState<string>('')
                 Where machines meet models — I explore, engineer, and evolve systems for tomorrow's manufacturing ...
                 {/* Passionate mechanical engineer with a focus on creating impactful solutions... */}
               </p>
-              <Link 
-                to="/about#top"
+              <HashLink smooth scroll={scrollWithOffset}
+                to="/about"
                 className="mt-6 inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300"
               >
                 Learn more about me
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-2 transition-transform duration-300" />
-              </Link>
+              </HashLink>
             </div>
           </div>
         </section>
@@ -258,13 +257,13 @@ const [latestPublicationTitle, setLatestPublicationTitle] = useState<string>('')
               <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
                 Engineer and researcher shaped by mechanical systems, now reimagining them through data and learning ...
               </p>
-              <Link 
-                to="/education#top"
+              <HashLink smooth scroll={scrollWithOffset}
+                to="/education"
                 className="mt-6 inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300"
               >
                 View my educational background
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-2 transition-transform duration-300" />
-              </Link>
+              </HashLink>
             </div>
           </div>
         </section>
@@ -286,13 +285,13 @@ const [latestPublicationTitle, setLatestPublicationTitle] = useState<string>('')
   {latestPublicationTitle || 'Loading latest publication...'} . . .
 </p>
               </div>
-              <Link 
-                to="/publications#top"
+              <HashLink smooth scroll={scrollWithOffset}
+                to="/publications"
                 className="mt-6 inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300"
               >
                 View all publications
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-2 transition-transform duration-300" />
-              </Link>
+              </HashLink>
             </div>
           </div>
         </section>
@@ -373,13 +372,13 @@ const [latestPublicationTitle, setLatestPublicationTitle] = useState<string>('')
         ))}
       </div>
 
-      <Link 
-        to="/skills#top"
+      <HashLink smooth scroll={scrollWithOffset}
+        to="/skills"
         className="mt-8 inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300"
       >
         See detailed skills
         <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-2 transition-transform duration-300" />
-      </Link>
+      </HashLink>
     </div>
   </div>
 </section>
@@ -387,7 +386,6 @@ const [latestPublicationTitle, setLatestPublicationTitle] = useState<string>('')
 
       </div>
       
-      <ScrollToTop />
     </div>
   );
 }

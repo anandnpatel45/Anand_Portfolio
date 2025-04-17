@@ -1,6 +1,7 @@
 import { ArrowLeft } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import ScrollToTop from '../components/ScrollToTop';
+import { HashLink } from 'react-router-hash-link';
+import { scrollWithOffset } from '../utils/scrollWithOffset'
+// import ScrollToTop from '../components/ScrollToTop';
 import { useEffect, useRef, useState } from 'react';
 
 /* ─── Slugify helper ───────────────────────────────── */
@@ -79,12 +80,12 @@ function LearningTimeline() {
               proj.label === 'Yet to be published . . .'
                 ? proj.label
                 : (
-                  <Link
+                  <HashLink smooth scroll={scrollWithOffset}
                     to={`/projects#${slug}`}
                     className="text-blue-600 hover:underline dark:text-blue-400"
                   >
                     {proj.label}
-                  </Link>
+                  </HashLink>
                 );
 
             return (
@@ -237,16 +238,16 @@ export default function About() {
       {/* Back button + ScrollTop (unchanged) */}
       <div className="bg-gray-50 dark:bg-dark-bg py-8 transition-colors duration-300">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Link
+          <HashLink smooth scroll={scrollWithOffset}
             to="/#about_preview"
             className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition duration-300"
           >
             <ArrowLeft className="w-4 h-8 mr-2" />
             Back to Home
-          </Link>
+          </HashLink>
         </div>
       </div>
-      <ScrollToTop />
+      {/* <ScrollToTop /> */}
     </>
   );
 }

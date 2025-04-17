@@ -1,7 +1,8 @@
 import { ArrowLeft } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import ScrollToTop from '../components/ScrollToTop';
+import { HashLink } from 'react-router-hash-link';
+// import ScrollToTop from '../components/ScrollToTop';
 import { useEffect } from 'react';
+import { scrollWithOffset } from '../utils/scrollWithOffset'
 
 export default function Education() {
 useEffect(() => {
@@ -171,17 +172,17 @@ useEffect(() => {
 
       <div className="bg-gray-50 dark:bg-dark-bg py-8 transition-colors duration-300">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Link
-            to="/#education_preview"
+          <HashLink smooth scroll={scrollWithOffset}
+            to="/#education_preview"  
             className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home
-          </Link>
+          </HashLink>
         </div>
       </div>
 
-      <ScrollToTop />
+      {/* <ScrollToTop /> */}
     </>
   );
 }

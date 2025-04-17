@@ -1,6 +1,7 @@
 import { ArrowLeft } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import ScrollToTop from '../components/ScrollToTop';
+import { HashLink } from 'react-router-hash-link';
+import { scrollWithOffset } from '../utils/scrollWithOffset'
+// import ScrollToTop from '../components/ScrollToTop';
 import { useEffect, useState } from 'react';
 
 interface Publication {
@@ -163,7 +164,8 @@ export default function Publications() {
                               className={`pl-6 py-4 transition-colors duration-300 border-l-4 ${color.border} ${color.bg}`}
                             >
                               <h2 className={`text-2xl font-bold text-gray-900 dark:text-white transition-colors duration-300 ${color.hoverText}`}>
-                                <a href={pub.link} target="_blank" rel="noopener noreferrer">{pub.title}</a>
+                                <HashLink smooth to={pub.link} scroll={scrollWithOffset}
+                                 target="_blank" rel="noopener noreferrer">{pub.title}</HashLink>
                               </h2>
                               <p className="text-gray-600 dark:text-gray-300 mt-2">
                                 {
@@ -178,12 +180,12 @@ export default function Publications() {
                               </p>
                               <p className="text-gray-600 dark:text-gray-300 mt-4">{pub.abstract}</p>
                               <div className="mt-4">
-                                <a 
-                                  href={pub.link} target="_blank" rel="noopener noreferrer"
+                                <HashLink smooth to={pub.link} scroll={scrollWithOffset}
+                                target="_blank" rel="noopener noreferrer"
                                   className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300"
                                 >
                                   Read More →
-                                </a>
+                                </HashLink>
                               </div>
                             </div>
                           );
@@ -227,17 +229,17 @@ export default function Publications() {
       
       <div className="bg-gray-50 dark:bg-dark-bg py-8 transition-colors duration-300">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Link
+          <HashLink smooth scroll={scrollWithOffset}
             to="/#publications_preview"
             className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home
-          </Link>
+          </HashLink>
         </div>
       </div>
 
-      <ScrollToTop />
+      {/* <ScrollToTop /> */}
     </>
   );
 }

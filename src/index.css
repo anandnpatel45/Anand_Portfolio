@@ -152,8 +152,8 @@
 
 /* Smooth Scrolling */
 html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 5rem;
+  /* scroll-behavior: smooth;
+  scroll-padding-top: 5rem; */
 }
 
 /* Hide scrollbar but keep functionality */
@@ -254,4 +254,18 @@ html {
 
 .custom-scroll-container.show-scrollbar::-webkit-scrollbar {
   opacity: 1;
+}
+
+:target::before {
+  content: "";
+  display: block;
+  height: 4rem;      /* adjust to your header’s height */
+  margin-top: -6rem;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* === TEST: is this file active? === */
+html {
+  outline: 5px solid hotpink !important;
 }

@@ -1,7 +1,9 @@
 import { ArrowLeft } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
+import { scrollWithOffset } from '../utils/scrollWithOffset'
+import { useLocation } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
-import ScrollToTop from '../components/ScrollToTop';
+// import ScrollToTop from '../components/ScrollToTop';
 import React from 'react'; // Make sure this is imported for JSX types
 
 // Helper to turn "AI Code Assistant" into "ai-code-assistant"
@@ -26,15 +28,14 @@ const createLinkedDescription = (
     const match = keywords.find((word) => word.toLowerCase() === part.toLowerCase());
     if (match) {
       return (
-        <a
+        <HashLink smooth to={links[match]} scroll={scrollWithOffset}
           key={index}
-          href={links[match]}
           className="text-blue-500 underline"
           target="_blank"
           rel="noopener noreferrer"
         >
           {part}
-        </a>
+        </HashLink>
       );
     }
     return <span key={index}>{part}</span>;
@@ -55,22 +56,6 @@ function Projects() {
       })
       .catch((error) => console.error('Error loading projects:', error));
   }, []);
-
-  useEffect(() => {
-    if (!location.hash) {
-      window.scrollTo(0, 0);
-      return;
-    }
-
-    const timeout = setTimeout(() => {
-      const element = document.getElementById(location.hash.slice(1));
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    }, 100);
-
-    return () => clearTimeout(timeout);
-  }, [location, projects]);
 
   const colorPalette = [
     { bg: 'bg-yellow-100 dark:bg-yellow-900/20', text: 'text-yellow-600 dark:text-yellow-400' },
@@ -156,25 +141,23 @@ function Projects() {
 
                           <div className="flex gap-4">
                             {project.paperUrl !== "#" && (
-                              <a
-                                href={project.paperUrl}
+                              <HashLink smooth to={project.paperUrl} scroll={scrollWithOffset}
       target="_blank"
       rel="noopener noreferrer"
                                 className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600"
                               >
                                 View publication
-                              </a>
+                              </HashLink>
                             )}
 
                             {project.githubUrl !== "#" && (
-                              <a
-                                href={project.githubUrl}
+                              <HashLink smooth to={project.githubUrl} scroll={scrollWithOffset}
       target="_blank"
       rel="noopener noreferrer"
                                 className="inline-flex items-center px-4 py-2 border border-gray-300 dark:border-gray-600 text-sm font-medium rounded-md text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
                               >
                                 View Code
-                              </a>
+                              </HashLink>
                             )}
                           </div>
                         </div>
@@ -187,18 +170,18 @@ function Projects() {
           </div>
 
           <div className="mt-8 mb-8">
-            <Link
+            <HashLink smooth scroll={scrollWithOffset}
               to="/#projects_preview"
               className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Home
-            </Link>
+            </HashLink>
           </div>
         </div>
       </div>
 
-      <ScrollToTop />
+      {/* <ScrollToTop /> */}
     </>
   );
 }

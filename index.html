@@ -5,6 +5,39 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anandkumar_Patel_Portfolio</title>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const base = '%BASE_URL%';
+        // 1. Fix <img> tags
+        document
+          .querySelectorAll('img[src^="/Media/"]')
+          .forEach(img => {
+            const path = img.getAttribute('src').slice(1);
+            img.src = base + path;
+          });
+    
+        // 2. Fix <a href> links
+        document
+          .querySelectorAll('a[href^="/Media/"]')
+          .forEach(a => {
+            const path = a.getAttribute('href').slice(1);
+            a.href = base + path;
+          });
+      });
+    
+      // 3. Monkey‑patch fetch()
+      ;(() => {
+        const base = '%BASE_URL%';
+        const originalFetch = window.fetch;
+        window.fetch = (resource, init) => {
+          if (typeof resource === 'string' && resource.startsWith('/Media/')) {
+            resource = base + resource.slice(1);
+          }
+          return originalFetch(resource, init);
+        };
+      })();
+    </script>
+    
   </head>
   <body>
     <div id="root"></div>

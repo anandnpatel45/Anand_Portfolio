@@ -1,5 +1,7 @@
 import { ArrowLeft, ArrowUp } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
+import { scrollWithOffset } from '../utils/scrollWithOffset'
 import { useEffect, useState } from 'react';
 
 
@@ -260,13 +262,13 @@ function wrapSkillName(name: string | null): React.ReactNode {
           </div>
           {/* Now the Back to Home button stays aligned with the card */}
 <div className="mt-8 mb-8">
-  <Link
+  <HashLink smooth scroll={scrollWithOffset}
     to="/#skills_preview"
     className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300"
   >
     <ArrowLeft className="w-4 h-4 mr-2" />
     Back to Home
-  </Link>
+  </HashLink>
 </div>
 </div> {/* close max-w-4xl */}
 </div> {/* close top section */}
