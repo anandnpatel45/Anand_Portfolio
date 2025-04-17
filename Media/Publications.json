@@ -1,0 +1,47 @@
+[
+  {
+    "kind": "Other",
+    "title": "Large Language Models for Extrapolative Modeling of Manufacturing Processes",
+    "authors": "K N Khanghah, A Patel, R Malhotra, H Xu",
+    "conference": "arXiv",
+    "year": 2025,
+    "abstract": "This paper presents a novel LLM-based framework that combines literature-driven knowledge extraction with minimal experimental data to build highly extrapolative models, outperforming the conventional machine learning approach.",
+    "link": "https://doi.org/10.48550/arXiv.2502.12185"
+  },
+  {
+    "kind": "Conference Proceedings",
+    "title": "Real-Time Recovery From Cyberattacks on Manufacturing Processes",
+    "authors": "B Mangrolia, J Cleeman, A Patel, A Jackson, R Malhotra",
+    "conference": "International Symposium on Flexible Automation",
+    "year": 2024,
+    "abstract": "This paper presents and evaluates an AI-based framework for FFF that enables real-time recovery from inter-road defects caused by cyberattacks on both internal and external process parameters, including scenarios beyond the system's training.",
+    "link": "https://doi.org/10.1115/ISFA2024-139964"
+  },
+  {
+    "kind": "Journal Publications",
+    "title": "Continuing minimal-defect production under material integrity cyberattacks",
+    "authors": "B Mangrolia, J Cleeman, A Patel, S Wei, C Shao, H Xu, R Malhotra",
+    "conference": "Manufacturing Letters",
+    "year": 2024,
+    "abstract": "This paper proposes a novel AI-based framework for real-time recovery from defects caused by cyberattacks on manufacturing processes.",
+    "link": "https://doi.org/10.1016/j.mfglet.2024.02.006"
+  },
+  {
+    "kind": "Conference Proceedings",
+    "title": "Toolpath Synthesis and Mechanical Properties in Multiplexed Fused Filament Fabrication",
+    "authors": "J Cleeman, A Jackson, A Patel, R Malhotra",
+    "conference": "ASME International Manufacturing Science and Engineering Conference",
+    "year": 2024,
+    "abstract": "This paper introduces an automated toolpath synthesis approach for MF3, focusing on the thermal and mechanical analysis of section junctions to improve process planning and mechanical performance.",
+    "link": "https://doi.org/10.1115/MSEC2024-126798"
+  },
+  {
+    "kind": "Journal Publications",
+    "title": "Throughput scaling and thermomechanical behaviour in multiplexed fused filament fabrication",
+    "authors": "R Malhotra, J Cleeman, A Jackson, A Patel, A Pelegri",
+    "conference": "CIRP Annals",
+    "year": 2024,
+    "abstract": "This paper highlights the novel ability of MF3 to dramatically scale throughput by addressing part size, infill density, and extruder spacing effects, along with a new thermal model that explains how the atypical temperature history enhances mechanical properties.",
+    "link": "https://doi.org/10.1016/j.cirp.2024.04.024"
+  }
+]

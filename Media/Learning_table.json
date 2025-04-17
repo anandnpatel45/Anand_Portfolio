@@ -1,0 +1,47 @@
+[
+  {
+    "year": 2025,
+    "skill": "Reinforcement Learning",
+    "projects": [
+      {
+        "label": "Yet to be published . . ."
+      }
+    ]
+  },
+  {
+    "year": 2024,
+    "skill": "Transfer Learning",
+    "projects": [
+      {
+        "label": "Yet to be published . . ."
+      }
+    ]
+  },
+  {
+    "year": 2023,
+    "skill": "Ontology and SPARQL",
+    "projects": [
+      {
+        "label": "PSPOnto: An application ontology to aid in data-driven materials design"
+      }
+    ]
+  },
+  {
+    "year": 2022,
+    "skill": "Machine Learning - CNNs",
+    "projects": [
+      {
+        "label": "Establishing inverse process-structure linkage using a deep convolutional neural networks (CNN) approach"
+      }
+    ]
+  },
+  {
+    "year": 2021,
+    "skill": "Experimental design",
+    "projects": [
+      {
+        "label": "Experimental thermal analysis of phase change materials (PCM) in domestic refrigerators"
+      }
+    ]
+  }
+]
